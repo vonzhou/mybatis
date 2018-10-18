@@ -1,4 +1,14 @@
-﻿mybatis源码中文注释版
+﻿# MyBatis 源码阅读
+
+
+
+## 绑定 binding
+
+org.apache.ibatis.binding
+
+
+
+---
 
 1.兵马未动，日志先行
 org.apache.ibatis.logging
@@ -77,8 +87,7 @@ org.apache.ibatis.scripting.xmltags
 15.注解
 org.apache.ibatis.annotations
 
-16.绑定
-org.apache.ibatis.binding
+
 
 17.执行器
 org.apache.ibatis.executor
