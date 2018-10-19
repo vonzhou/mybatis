@@ -1,35 +1,36 @@
 ﻿# MyBatis 源码阅读
 
 
+## 日志 logging
+
+org.apache.ibatis.logging
+
+代理模式
 
 ## 绑定 binding
 
 org.apache.ibatis.binding
 
+## 缓存 Cache
+
+org.apache.ibatis.cache
+
+门面模式 
+
+
+
+
+## TODO 
+
+根据测试用例再看代码
+
+梳理里面使用到的设计模式
 
 
 ---
 
-1.兵马未动，日志先行
-org.apache.ibatis.logging
-org.apache.ibatis.logging.commons
-org.apache.ibatis.logging.jdbc
-org.apache.ibatis.logging.jdk14
-org.apache.ibatis.logging.log4j
-org.apache.ibatis.logging.log4j2
-org.apache.ibatis.logging.nologging
-org.apache.ibatis.logging.slf4j
-org.apache.ibatis.logging.stdout
-对象适配器设计模式
-设计模式可参考http://www.cnblogs.com/liuling/archive/2013/04/12/adapter.html
 
-2.异常
-org.apache.ibatis.exceptions
 
-3.缓存
-org.apache.ibatis.cache
-org.apache.ibatis.cache.decorators
-org.apache.ibatis.cache.impl
 
 4.解析
 org.apache.ibatis.parsing

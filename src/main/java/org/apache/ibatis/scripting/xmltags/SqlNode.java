@@ -18,10 +18,19 @@ package org.apache.ibatis.scripting.xmltags;
 /**
  * @author Clinton Begin
  */
+
 /**
  * SQL节点（choose|foreach|if|）
- *
  */
 public interface SqlNode {
-  boolean apply(DynamicContext context);
+    /**
+     * 该方法会根据用户传入的实参，参数解析该 SqlNode 所记录的动态SQL节点，并调用
+     * DynamicContext.appendSql()方法将解析后的SQL 片段追加到
+     * DynamicContext.sqlBuilder 中保存
+     * 当 SQL 节点 下的所有 SqlNode 完成解析后，我们就可以从DynamicContext中获取一条动态生成的 、完整的 SQL 语句
+     *
+     * @param context
+     * @return
+     */
+    boolean apply(DynamicContext context);
 }

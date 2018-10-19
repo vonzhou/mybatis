@@ -331,7 +331,8 @@ public class XMLMapperBuilder extends BaseBuilder {
 //    <result property="doorCount" column="door_count" />
 //  </resultMap>
         String extend = resultMapNode.getStringAttribute("extends");
-        //autoMapping
+
+        //autoMapping 是否启用自动映射？开启后自动查找与列名同名的属性名
         Boolean autoMapping = resultMapNode.getBooleanAttribute("autoMapping");
         Class<?> typeClass = resolveClass(type);
         Discriminator discriminator = null;
@@ -494,6 +495,9 @@ public class XMLMapperBuilder extends BaseBuilder {
         return null;
     }
 
+    /**
+     * 映射配置文件与Mapper接口的绑定
+     */
     private void bindMapperForNamespace() {
         String namespace = builderAssistant.getCurrentNamespace();
         if (namespace != null) {
@@ -509,6 +513,7 @@ public class XMLMapperBuilder extends BaseBuilder {
                     // to prevent loading again this resource from the mapper interface
                     // look at MapperAnnotationBuilder#loadXmlResource
                     configuration.addLoadedResource("namespace:" + namespace);
+                    // 注册boundType接口
                     configuration.addMapper(boundType);
                 }
             }

@@ -147,7 +147,7 @@ public class MapperBuilderAssistant extends BaseBuilder {
                 .blocking(blocking)
                 .properties(props)
                 .build();
-        //加入缓存
+        //加入缓存，底层是StrictMap类型
         configuration.addCache(cache);
         //当前的缓存
         currentCache = cache;
