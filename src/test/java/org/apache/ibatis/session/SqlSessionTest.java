@@ -130,6 +130,8 @@ public class SqlSessionTest extends BaseDataTest {
         }
     }
 
+    // ----------------------------------------------
+
     @Test
     public void shouldOpenAndClose() throws Exception {
         SqlSession session = sqlMapper.openSession(TransactionIsolationLevel.SERIALIZABLE);

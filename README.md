@@ -17,6 +17,16 @@ org.apache.ibatis.cache
 
 门面模式 
 
+应用在一级,二级缓存中,具体见 Executor 模块
+
+## Executor  执行器模块
+
+模板方法模式,装饰器模式
+
+
+
+
+
 
 
 
@@ -25,6 +35,9 @@ org.apache.ibatis.cache
 根据测试用例再看代码
 
 梳理里面使用到的设计模式
+
+
+学习JDBC编程
 
 
 ---
