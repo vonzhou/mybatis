@@ -23,6 +23,14 @@ org.apache.ibatis.cache
 
 模板方法模式,装饰器模式
 
+## Plugin 插件
+
+责任链模式,代理模式
+
+PageHelper就是利用了mybatis的插件功能实现的
+
+
+
 
 
 
@@ -38,6 +46,9 @@ org.apache.ibatis.cache
 
 
 学习JDBC编程
+
+mybatis-spring解决了哪些问题
+
 
 
 ---

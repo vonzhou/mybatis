@@ -523,6 +523,7 @@ public class Configuration {
             executor = new CachingExecutor(executor);
         }
         //此处调用插件,通过插件可以改变Executor行为
+        // 代理
         executor = (Executor) interceptorChain.pluginAll(executor);
         return executor;
     }
