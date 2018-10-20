@@ -198,6 +198,11 @@ public class SqlSessionTest extends BaseDataTest {
         }
     }
 
+    /**
+     * Discriminator 的作用是啥?
+     *
+     * @throws Exception
+     */
     @Test
     public void shouldEnsureThatBothEarlyAndLateResolutionOfNesteDiscriminatorsResolesToUseNestedResultSetHandler() throws Exception {
         SqlSession session = sqlMapper.openSession();
@@ -292,6 +297,7 @@ public class SqlSessionTest extends BaseDataTest {
             assertEquals(1, updates);
             updated = session.selectOne("org.apache.ibatis.domain.blog.mappers.AuthorMapper.selectAuthor", 101);
             assertEquals(original.getEmail(), updated.getEmail());
+            //  没有提交
         } finally {
             session.close();
         }
